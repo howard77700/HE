@@ -2,170 +2,86 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>HE — Harmony in Every Song</title>
 
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
+    <link rel="stylesheet" href="style.css">
 
-    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
 
-    <link
-        rel="manifest"
-        href="manifest.json"
-    >
+    <meta name="theme-color" content="#080808">
 
-    <meta
-        name="theme-color"
-        content="#080808"
-    >
-
-    <meta
-        name="apple-mobile-web-app-capable"
-        content="yes"
-    >
-
-    <meta
-        name="apple-mobile-web-app-status-bar-style"
-        content="black"
-    >
-
-    <meta
-        name="apple-mobile-web-app-title"
-        content="HE"
-    >
-
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="HE">
 </head>
-
 
 <body>
 
-
     <!-- SIDEBAR -->
-
     <aside class="sidebar">
 
         <div class="brand">
-
-            <div class="brand-logo">
-                和
-            </div>
+            <div class="brand-logo">和</div>
 
             <div>
-
-                <h1>
-                    HE
-                </h1>
-
-                <span>
-                    和 · Music
-                </span>
-
+                <h1>HE</h1>
+                <p>Harmony in Every Song</p>
             </div>
-
         </div>
-
 
         <nav class="menu">
 
-            <button
-                id="navHome"
-                class="menu-item active"
-            >
+            <button id="navHome" class="menu-item active" type="button">
                 <span>⌂</span>
-                Home
+                <span>Home</span>
             </button>
 
-
-            <button
-                id="navSongs"
-                class="menu-item"
-            >
+            <button id="navSongs" class="menu-item" type="button">
                 <span>♫</span>
-                Songs
+                <span>Songs</span>
             </button>
 
-
-            <button
-                id="navFavorites"
-                class="menu-item"
-            >
-                <span>♥</span>
-                Your Favorite Music
+            <button id="navFavorites" class="menu-item" type="button">
+                <span>♡</span>
+                <span>Favorites</span>
             </button>
 
         </nav>
 
-
-        <button
-            id="navAbout"
-            class="about-button"
-        >
-            ⓘ About Me
+        <button id="navAbout" class="about-button" type="button">
+            <span>ⓘ</span>
+            <span>About Me</span>
         </button>
-
-
-        <div class="sidebar-bottom">
-
-            <div class="mini-logo">
-                和
-            </div>
-
-            <p>
-                Harmony in Every Song
-            </p>
-
-            <small>
-                Created by Howard Hakim
-            </small>
-
-        </div>
 
     </aside>
 
 
-
     <!-- MAIN -->
-
     <main class="main">
 
-
-        <!-- TOP BAR -->
-
+        <!-- TOPBAR -->
         <header class="topbar">
 
             <div>
-
-                <span class="welcome">
-                    欢迎回来
-                </span>
-
-                <h2 id="greeting">
+                <p id="greeting" class="greeting">
                     Good evening
-                </h2>
+                </p>
 
+                <h2>Welcome to HE</h2>
             </div>
-
 
             <div class="search-box">
 
-                <span>
-                    ⌕
-                </span>
+                <span>⌕</span>
 
                 <input
                     type="text"
                     id="searchInput"
-                    placeholder="Search music..."
+                    placeholder="Search song..."
                 >
 
             </div>
@@ -173,264 +89,194 @@
         </header>
 
 
-
         <!-- HOME -->
-
-        <section id="homePage">
-
+        <section id="homePage" class="page active-page">
 
             <div class="hero">
 
-
                 <div class="hero-text">
 
-                    <span class="hero-label">
-                        HE · 和
-                    </span>
+                    <p class="small-title">
+                        YOUR PERSONAL MUSIC PLAYER
+                    </p>
 
                     <h1>
-                        Your music.<br>
-                        Your harmony.
+                        Harmony<br>
+                        in Every Song
                     </h1>
 
                     <p>
-                        每一首歌，都有属于你的和谐。
+                        Listen to your favorite music
+                        and create your own peaceful
+                        music collection.
                     </p>
 
-                    <button
-                        id="startListening"
-                        class="start-button"
-                    >
+                    <button id="startListening" class="primary-button">
                         Start Listening
                     </button>
 
                 </div>
 
-
-                <div class="hero-disc">
-
-                    <div class="disc">
-
-                        <div class="disc-center">
-                            和
-                        </div>
-
-                    </div>
-
+                <div class="hero-logo">
+                    和
                 </div>
 
             </div>
-
 
 
             <!-- RECENTLY ADDED -->
+            <div class="section-header">
 
-            <section class="section">
+                <div>
+                    <p class="section-small">
+                        YOUR LIBRARY
+                    </p>
 
-
-                <div class="section-header">
-
-                    <div>
-
-                        <span class="section-label">
-                            YOUR LIBRARY
-                        </span>
-
-                        <h2>
-                            Recently Added
-                        </h2>
-
-                    </div>
-
-
-                    <button
-                        id="addMusicBtn"
-                        class="add-button"
-                    >
-                        + Add Music
-                    </button>
-
+                    <h2>Recently Added</h2>
                 </div>
 
-
-                <div
-                    id="recentContainer"
-                    class="recent-list"
-                ></div>
-
-            </section>
-
-
-        </section>
-
-
-
-        <!-- SONGS -->
-
-        <section
-            id="songsPage"
-            style="display: none;"
-        >
-
-
-            <div class="page-title">
-
-                <span class="section-label">
-                    YOUR LIBRARY
-                </span>
-
-                <h2 id="songsTitle">
-                    All Songs
-                </h2>
+                <button id="addMusicHome" class="add-button">
+                    + Add Music
+                </button>
 
             </div>
 
-
-            <div
-                id="songsContainer"
-                class="songs-list"
-            ></div>
-
+            <div id="recentSongs" class="song-list">
+            </div>
 
         </section>
 
 
+        <!-- SONGS PAGE -->
+        <section id="songsPage" class="page">
 
-        <!-- ABOUT -->
+            <div class="page-title">
 
-        <section
-            id="aboutPage"
-            style="display: none;"
-        >
+                <div>
+                    <p class="section-small">
+                        YOUR COLLECTION
+                    </p>
+
+                    <h1>All Songs</h1>
+                </div>
+
+                <button id="addMusicSongs" class="add-button">
+                    + Add Music
+                </button>
+
+            </div>
+
+            <div id="allSongs" class="song-list">
+            </div>
+
+        </section>
 
 
-            <div class="about-page">
+        <!-- FAVORITES PAGE -->
+        <section id="favoritesPage" class="page">
 
+            <div class="page-title">
+
+                <div>
+                    <p class="section-small">
+                        YOUR FAVORITES
+                    </p>
+
+                    <h1>Your Favorite Music</h1>
+                </div>
+
+            </div>
+
+            <div id="favoriteSongs" class="song-list">
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT PAGE -->
+        <section id="aboutPage" class="page">
+
+            <div class="about-header">
 
                 <div class="about-logo">
                     和
                 </div>
 
-
-                <h1>
-                    HE
-                </h1>
-
-
-                <div class="about-chinese">
-                    和 · hé
-                </div>
-
-
-                <h2>
-                    Harmony in Every Song
-                </h2>
-
-
-
-                <div class="about-content">
-
-
-                    <div class="about-card">
-
-                        <span class="about-number">
-                            01
-                        </span>
-
-                        <h3>
-                            Why HE?
-                        </h3>
-
-                        <p>
-                            HE is a personal music player created
-                            to make listening to music feel simple,
-                            calm and personal.
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="about-card">
-
-                        <span class="about-number">
-                            02
-                        </span>
-
-                        <h3>
-                            和 · hé
-                        </h3>
-
-                        <p>
-                            The character 和 is used here as the
-                            symbol of harmony, balance and things
-                            coming together.
-                        </p>
-
-                    </div>
-
-
-
-                    <div class="about-card">
-
-                        <span class="about-number">
-                            03
-                        </span>
-
-                        <h3>
-                            The Idea
-                        </h3>
-
-                        <p>
-                            Music can create a personal space where
-                            sound, emotion and memories come together.
-                        </p>
-
-                    </div>
-
-
-                </div>
-
-
-
-                <div class="creator">
-
-                    <span>
-                        CREATED BY
-                    </span>
-
-                    <h3>
-                        Howard Hakim
-                    </h3>
-
-                    <p>
-                        Founder & Developer
+                <div>
+                    <p class="section-small">
+                        ABOUT
                     </p>
 
-                    <small>
-                        September 2026
-                    </small>
-
+                    <h1>About HE</h1>
                 </div>
-
 
             </div>
 
 
-        </section>
+            <div class="about-grid">
 
+                <div class="about-card">
+
+                    <h3>What is HE?</h3>
+
+                    <p>
+                        HE is a personal music player
+                        designed to keep your favorite
+                        songs in one place.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <h3>Meaning of 和</h3>
+
+                    <p>
+                        和 is pronounced "hé" in Mandarin.
+                        It represents harmony, peace,
+                        and balance.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <h3>Harmony in Every Song</h3>
+
+                    <p>
+                        Music can create different
+                        feelings and memories.
+                        HE is made to keep those moments
+                        close through music.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="creator">
+
+                <p>CREATED BY</p>
+
+                <h2>Howard Hakim</h2>
+
+                <span>Established September 2026</span>
+
+            </div>
+
+        </section>
 
     </main>
 
 
-
     <!-- MUSIC PLAYER -->
-
     <div class="player">
 
-
+        <!-- SONG INFORMATION -->
         <div class="player-song">
-
 
             <div class="player-cover">
 
@@ -440,7 +286,10 @@
                     alt=""
                 >
 
-                <div class="player-default-cover">
+                <div
+                    id="playerDefaultCover"
+                    class="player-default-cover"
+                >
                     和
                 </div>
 
@@ -460,24 +309,26 @@
             </div>
 
 
-            <button
-                id="favoriteBtn"
-                class="player-favorite"
-                type="button"
-            >
-                ♡
-            </button>
+            <!-- FAVORITE ONLY -->
+            <div class="player-extra">
 
+                <button
+                    id="favoriteBtn"
+                    class="player-favorite"
+                    type="button"
+                >
+                    ♡
+                </button>
+
+            </div>
 
         </div>
 
 
-
+        <!-- CONTROLS -->
         <div class="player-center">
 
-
             <div class="player-controls">
-
 
                 <button
                     id="shuffleBtn"
@@ -486,14 +337,12 @@
                     ⤨
                 </button>
 
-
                 <button
                     id="prevBtn"
                     type="button"
                 >
                     |◀
                 </button>
-
 
                 <button
                     id="playBtn"
@@ -503,7 +352,6 @@
                     ▶
                 </button>
 
-
                 <button
                     id="nextBtn"
                     type="button"
@@ -511,7 +359,7 @@
                     ▶|
                 </button>
 
-
+                <!-- REPEAT -->
                 <button
                     id="repeatBtn"
                     type="button"
@@ -519,18 +367,15 @@
                     ↻
                 </button>
 
-
             </div>
 
 
-
+            <!-- PROGRESS -->
             <div class="progress-area">
-
 
                 <span id="currentTime">
                     0:00
                 </span>
-
 
                 <input
                     type="range"
@@ -541,85 +386,44 @@
                     step="0.1"
                 >
 
-
                 <span id="duration">
                     0:00
                 </span>
 
-
             </div>
 
-
         </div>
-
-
-
-        <div class="volume-area">
-
-            <span>
-                🔊
-            </span>
-
-
-            <input
-                type="range"
-                id="volume"
-                min="0"
-                max="1"
-                value="0.8"
-                step="0.01"
-            >
-
-        </div>
-
 
     </div>
 
 
-
     <!-- ADD MUSIC MODAL -->
-
-    <div
-        id="addModal"
-        class="modal"
-    >
-
+    <div id="addModal" class="modal">
 
         <div class="modal-box">
 
-
             <button
                 id="closeAddModal"
-                class="close-modal"
+                class="close-button"
                 type="button"
             >
                 ×
             </button>
 
+            <h2>Add Music</h2>
 
-            <div class="modal-logo">
-                和
-            </div>
-
-
-            <h2>
-                Add Music
-            </h2>
-
-
-            <p class="modal-description">
-                Add your own music to HE.
+            <p class="modal-subtitle">
+                Add your MP3 to HE
             </p>
 
 
             <label>
-                MP3 File
+                Music File
             </label>
-
 
             <input
                 type="file"
-                id="musicInput"
+                id="musicFile"
                 accept=".mp3,audio/mpeg"
             >
 
@@ -627,7 +431,6 @@
             <label>
                 Artist
             </label>
-
 
             <input
                 type="text"
@@ -640,105 +443,68 @@
                 Album Cover
             </label>
 
-
             <input
                 type="file"
-                id="coverInput"
+                id="coverFile"
                 accept="image/*"
             >
 
 
-            <img
-                id="coverPreview"
-                class="cover-preview"
-                src=""
-                alt=""
-            >
-
-
             <button
-                id="saveMusicBtn"
-                class="save-button"
+                id="saveMusic"
+                class="primary-button modal-button"
                 type="button"
             >
-                Add Music
+                Add Song
             </button>
 
-
         </div>
-
 
     </div>
 
 
-
     <!-- DELETE MODAL -->
-
-    <div
-        id="deleteModal"
-        class="modal"
-    >
-
+    <div id="deleteModal" class="modal">
 
         <div class="modal-box delete-box">
 
-
-            <div class="delete-icon">
-                ×
-            </div>
-
-
-            <h2>
-                Delete Music?
-            </h2>
-
+            <h2>Delete Song?</h2>
 
             <p>
-                This song will be removed from your HE library.
+                This song will be removed from
+                your HE music library.
             </p>
-
 
             <div class="delete-actions">
 
-
                 <button
-                    id="cancelDeleteBtn"
-                    class="cancel-button"
+                    id="cancelDelete"
+                    class="secondary-button"
                     type="button"
                 >
                     Cancel
                 </button>
 
-
                 <button
-                    id="confirmDeleteBtn"
+                    id="confirmDelete"
                     class="delete-button"
                     type="button"
                 >
                     Delete
                 </button>
 
-
             </div>
 
-
         </div>
-
 
     </div>
 
 
-
     <!-- AUDIO -->
-
     <audio id="audio"></audio>
 
 
-
-    <!-- JAVASCRIPT -->
-
     <script src="script.js"></script>
-
 
 </body>
 
